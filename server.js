@@ -31,18 +31,6 @@ function queryAllProducts() {
     });
 }
 
-function quantityCheck(userID, userQuantity) {
-    var tf;
-    connection.query("SELECT * FROM products", function (err, res) {
-        // console.log(res[(id - 1)].quantity)
-        if (res[(userID - 1)].quantity >= userQuantity) {
-            tf = true;
-        }
-
-    });
-    return tf;
-}
-
 function start() {
     inquirer
         .prompt([
